@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './screens/App';
-
+import { BrowserRouter as Router } from 'react-router-dom';  // Asegúrate de importar el Router
+import SearchInfluecers from './screens/SearchInfluencer';
+import Home from './screens/Home'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>  {/* Asegúrate de envolver el componente con Router */}
+      <SearchInfluecers /> 
+      <Home/>
+    </Router>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// SearchInfluencers main por mientras, posteriormente el panel del admin lo será
