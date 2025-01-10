@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
 
 const SearchInfluencers = () => {
   const [username, setUsername] = useState('');
@@ -26,7 +25,6 @@ const SearchInfluencers = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Navbar />
       <div className="container mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-4">Búsqueda de Influencer</h2>
         <div className="flex mb-4">

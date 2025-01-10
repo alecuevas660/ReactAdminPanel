@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/search" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <span className="text-white text-lg font-semibold">VerifyInfluencers</span>
             </Link>
           </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
             <ul className="ml-10 flex items-baseline space-x-4">
               <li>
                 <Link
-                  to="/Home"
+                  to="/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Home
@@ -31,10 +31,10 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/search"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Servicios
+                  Search
                 </Link>
               </li>
               <li>
