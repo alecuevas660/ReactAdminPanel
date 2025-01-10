@@ -36,17 +36,18 @@ async function getTweetsByUserId(userId) {
 // Función principal para obtener tweets a partir del nombre de usuario
 async function getTweetsByUsername(username) {
   try {
-    // Primero obtener el ID del usuario
     const userId = await getUserIdByUsername(username);
-
-    // Luego obtener los tweets usando el ID del usuario
-    const tweets = await getTweetsByUserId(userId);
-
-    return tweets; // Devuelve los tweets obtenidos
+    const response = await getTweetsByUserId(userId);
+    console.log('Respuesta de Twitter:', response); // Verifica la respuesta
+    const tweets = response.data;
+    console.log('Tweets obtenidos:', tweets); // Verifica los tweets
+    return tweets;
   } catch (error) {
     console.error('Error:', error.message);
     throw new Error('No se pudieron obtener los tweets.');
   }
 }
+
+
 
 module.exports = { getTweetsByUsername }; // Exporta la función principal
